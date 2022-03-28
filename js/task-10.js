@@ -11,7 +11,7 @@ btnCreate.addEventListener("click", createBoxes);
 btnDestroy.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
-  amount = Number(inputNumber.value);
+  amount = inputNumber.value;
   const array = [];
 
   for (let i = 1; i <= amount; i += 1) {
