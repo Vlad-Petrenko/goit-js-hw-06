@@ -11,8 +11,8 @@ const divBoxes = document.querySelector("div#boxes");
 btnCreate.addEventListener("click", getAmount);
 btnDestroy.addEventListener("click", destroyBoxes);
 
-function getAmount(amount) {
-  amount = inputNumber.value;
+function getAmount() {
+   let amount = inputNumber.value;
   createBoxes(amount);
 };
 
