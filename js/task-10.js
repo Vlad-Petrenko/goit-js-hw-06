@@ -10,10 +10,11 @@ const divBoxes = document.querySelector("div#boxes");
 btnCreate.addEventListener("click", createBoxes);
 btnDestroy.addEventListener("click", destroyBoxes);
 
-function createBoxes() {
+function createBoxes(amount) {
+  amount = Number(inputNumber.value);
   const array = [];
 
-  for (let i = 1; i <= Number(inputNumber.value); i += 1) {
+  for (let i = 1; i <= amount; i += 1) {
     array.push(
       `<div style="background-color: ${getRandomHexColor()}; width: ${
         20 + i * 10
@@ -25,4 +26,5 @@ function createBoxes() {
 
 function destroyBoxes() {
   divBoxes.innerHTML = "";
+  inputNumber.value = "";
 }
